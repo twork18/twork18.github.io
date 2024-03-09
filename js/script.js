@@ -27,7 +27,7 @@ function sendRequest(action, params, callback) {
     let xAuthValue = generateXAuth(password);
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://api.valantis.store:40000/", true);
+    xhr.open("POST", "https://api.valantis.store:41000/", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Auth", xAuthValue);
     xhr.onload = function() {
