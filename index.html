@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>ValantisProject</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="gifs&imgs/160838162.png" alt="logo" style="width: 60px; height: 60px">
+            <h1>ValantisProject</h1>
+        </div>
+        <div class="filters">
+            <label for="priceFilter">Цена:</label>
+            <input type="text" placeholder="15000" id="priceFilter" required>
+            <label for="brandFilter">Бренд:</label>
+            <input type="text" placeholder="Cartier" id="brandFilter">
+            <label for="nameFilter">Название товара:</label>
+            <input type="text" placeholder="Золотое кольцо" id="nameFilter">
+            <div class="wrapper">
+                <div class="link_wrapper">
+                    <a href="#" class="button-filter" onclick="applyFilter()">Применить фильтр</a>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                            <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>ID товара</th>
+                    <th>Название товара</th>
+                    <th>Цена</th>
+                    <th>Бренд</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" style="display: none;">
+            </tbody>
+        </table>
+
+        <div class="loading-gif" id="loadingSpinner" style="display: none;">
+            <img src="gifs&imgs/Ромб.gif" alt="Loading..." />
+        </div>
+
+        <div class="pagination" style="display: none;">
+            <button id="prevPageBtn" class="change-pages button-style" style="display: inline-block;">Предыдущая</button>
+            <button id="nextPageBtn" class="next-page-btn change-pages button-style" style="display: inline-block">Следующая</button>
+        </div>
+    </div>
+</body>
+
+</html>
