@@ -248,10 +248,12 @@ function applyFilter() {
     offsetForPages = [0];
     limitValue = 0;
 
-    if (params == {}) {
+    if (!params.price && !params.brand && !params.product) {
+        console.log('fffff')
         filterIsTrue = false;
         updateTable();
     } else {
+        console.log('ddddd')
         filterIsTrue = true;
         filterUpdate(params);
     }
